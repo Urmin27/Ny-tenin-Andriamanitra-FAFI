@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitoriana Filazantsara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Mainty */
+            color: #ffffff;
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: #004aad; /* Bleu */
+        }
+        header button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #f97300; /* Orange */
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        header button:hover {
+            background-color: #ffffff;
+            color: #f97300;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid #f97300; /* Orange */
+            border-radius: 10px;
+            background-color: #1a1a1a; /* Mainty mivalona */
+            min-height: 150px; /* Atao malalaka mba hanoratana mora */
+            display: none; /* Hatao tsy miseho raha tsy nofidina */
+        }
+        section.active {
+            display: block; /* Miseho rehefa voafidy */
+        }
+        
+       .mandeha{
+           border:1px solid blue ;
+           Text-align :center;
+           Background-color :blue ;
+           Color : white ;
+           
+       }
+      .audio{
+          Background-color :orange;
+          Color: red ;
+          battom: 16px
+          border-radius :5px solid yellow ;
+      }
+      
+      
+      .share-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .share-buttons a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+        .facebook { background-color: #4267B2; }
+        .telegram { background-color: #0088cc; }
+        .email { background-color: #D44638; }
+        .whatsapp { background-color: #25D366; }
+        
+        
+        
+       .a{
+           Background-color :green ;
+           Color :white ;
+           border-radius :2px
+           border:1px solid black 
+       }
+       
+       
+       
+       
+       
+      .call-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .orange {
+            background-color: #ff8c00;
+            border: 2px solid #e07c00;
+        }
+        .orange:hover {
+            background-color: #e07c00;
+        }
+        .airtel {
+            background-color: #d50000;
+            border: 2px solid #b40000;
+        }
+        .airtel:hover {
+            background-color: #b40000;
+        }
+        .telma {
+            background-color: #00a859;
+            border: 2px solid #008748;
+        }
+        .telma:hover {
+            background-color: #008748;
+        }
+        
+       .whatsapp{
+           background-color: #00a859;
+            border: 2px solid #008748
+       }
+       .whatsapp:hover {
+       background-color: 
+       
+           
+       }
+       
+       
+      <!-- bot -->
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      border: 10px double yellow;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    #chat-container {
+      width: 100%;
+      max-width: 600px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      position: relative;
+    }
+
+    #question-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .question-button {
+      flex: 1 1 calc(50% - 10px);
+      padding: 10px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .question-button:hover {
+      background-color: #357ab8;
+    }
+
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      max-height: 300px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      background-color: orange;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 70%;
+      background-color: orange;
+    }
+
+    .user-message {
+      background-color: #e1f5fe;
+      color: #000;
+      text-align: right;
+      margin-left: auto;
+    }
+
+    .bot-message {
+      background-color: #4a90e2;
+      color: white;
+      text-align: left;
+      margin-right: auto;
+    }
+
+    #input-container {
+      display: flex;
+    }
+
+    #user-input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px 0 0 5px;
+    }
+
+    #send-button {
+      padding: 10px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
+    #send-button:hover {
+      background-color: #357ab8;
+    }
+
+    footer {
+      text-align: center;
+      p    adding: 10px;
+      background-color: #4a90e2;
+      color: white;
+    } 
+      
+     .b{
+         Color:Red;
+         Text-align :center ;
+         Background-color :white ;
+         Border :1px solid black; 
+         Border-radius :5px ;
+     }
+     
+     
+     <!-- annonce -->
+     .container {
+            margin-top: 100px;
+        }
+        .announcement {
+            border: 2px solid #000;
+            padding: 20px;
+            display: inline-block;
+            background-color: green ;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: blue ;
+            text-decoration: none;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .button.close {
+            background-color: #f44336;
+        }
+        .button.close:hover {
+            background-color: #e53935;
+        }
+     
+    </style>
+</head>
+<body>
+    <header>
+        <button onclick="showSection('audio')">Toriteny audio</button>
+        <button onclick="showSection('vavolombelona')">Toriteny antsoratra </button>
+        <button onclick="showSection('client')">Mila vavaka</button>
+    </header>
+
+    <section id="audio" class="active">
+        <!-- Azonao soratana eto ny votoaty mikasika ny "Toriteny Audio" -->
+        
+        <div class="container" id="announcement">
+        <div class="announcement">
+            <h2>Annonce Manan-danja!</h2>
+            <p>Fanavaozana vaovao momba ny site na vokatra atolotra dia azo jerena eto. Tsindrio ny bokotra mise à jour raha hijery ny fampianarana eto amin'ny pejy ianao.</p>
+            <div class="button-container">
+                <a href="https://whatsapp.com/channel/0029Vb3essoK5cDORJWfhW12 " class="button">Mise à jour</a>
+                <button class="button close" onclick="closeAnnouncement()">Fermer</button>
+            </div>
+        </div>
+        
+        <script>
+        function closeAnnouncement() {
+            const announcement = document.getElementById('announcement');
+            announcement.style.display = 'none';
+        }
+    </script>
+    </div>
+        <div class="b">
+        <a href="https://whatsapp.com/channel/0029Vb3essoK5cDORJWfhW12">mise à jour lien </a>
+        </div >
+        <h1 style ="color :red; text-align 'center;'">NY FANOLORANTENA </h1><br >
+        
+        <div class="mandeha ">
+            
+            <marquee behavior="scroll" direction="left">
+  Miarahaba! Raha te hanaraka fampianarana isan'andro ianao dia tsindrio ny bokitra mise à jour eto ambony. Ary midira amin'ny lien izay itanao ao. Fanampiny, raha itanao fa nahasoa anao ilay fampianarana této, dia zarao amin'ny namanao ity page ity. Izany dia efa asan'i Tompo lehibe ho anao. Misaotra! 
+  
+</marquee>
+        </div><br >
+
+
+<!-- Mampiasa iframe ho an'ny audio -->
+    <iframe src="https://drive.google.com/file/d/1xwwXKAxMcDUEFri_lznFIEs0jGctH4pn/preview" width="100%" height="80" allow="autoplay"></iframe>
+
+
+
+<!-- Rohy hisintonana ilay rakitra -->
+<div class="audio">
+    <a href="https://drive.google.com/file/d/1xwwXKAxMcDUEFri_lznFIEs0jGctH4pn/view?usp=drivesdk">
+  Télécharger
+</a>
+</div>
+
+
+    </section>
+
+    <section id="vavolombelona">
+        <!-- Azonao soratana eto ny votoaty mikasika ny "Fijorona Vavolombelona" -->
+        
+        
+        <html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Synthesis Test</title>
+</head>
+<body>
+    
+
+        <h1 style="color :green;background-color :white ;border : 1px solid black ">Ny Herin'ny Tenin'Andriamanitra (Ny Baiboly)</h1><br><br>
+        <p style="border:1px solid black :background-color :orange :color :black;"> 
+
+Andininy Fototra: 2 Timoty 3:16-17 <br> <br>
+Ny Soratra Masina rehetra dia nomen'ny tsindrimandrin'Andriamanitra ka mahasoa ho fampianarana sy ho fananarana ary ho fanitsiana ary ho fanitsiana ny marina, mba ho tanteraka ny olon'Andriamanitra, ho voaomana tsara ho amin'ny asa tsara rehetra.<br ><br>
+
+
+1. Ny Herin'ny Tenin'Andriamanitra <br><br>
+Ny Tenin’Andriamanitra dia tsy toy ny teny hafa rehetra eto amin’izao tontolo izao. Tsy voafetra amin’ny teny tsotra, fa manana hery lehibe izay afaka manova ny fiainan’ny olona, manoro làlana, ary manome fifaliana. Raha ny zavatra rehetra eto amin’izao tontolo izao mety ho levona, ny Tenin’Andriamanitra kosa dia maharitra mandrakizay (Isaia 40:8).<br ><br>
+
+Ohatra:<br><br>
+Nisy lehilahy iray niaina tao anaty fahoriana lalina. Nataony ny zava-drehetra mba hahita fahasambarana, saingy tsy nahita izy. Indray andro anefa, nanokatra Baiboly izy ka nahita ilay andininy hoe: Avia atỳ amiko ianareo rehetra izay miasa fatratra sy mavesatra entana, ary Izaho no hanome anareo fitsaharana” (Matio 11:28). Io teny io no nanova ny fiainany, satria tsapany fa Andriamanitra dia vonona hanome fitsaharana sy fanamaivanana.<br><br>
+
+
+
+ 2. Ny Tenin’Andriamanitra dia Torolàlana ho An’ny Fiainana: 
+Tsy misy olona afaka mandeha lavitra eo amin’ny fiainana raha tsy manana torolàlana mazava. Tahaka ny làlana misy maizina izay mila jiro, ny Baiboly dia miasa ho toy ny jiro manazava ny lalan’ny fiainantsika. “Ny teninao no fanilon’ny tongotro sy fanazavana ny làlako”(Salamo 119:105). <br ><br>
+
+Fanazavana:<br><br>
+Rehefa manaraka ny torolàlana ao amin’ny Tenin’Andriamanitra isika dia misoroka ny fahadisoana lehibe, toy ny fifandraisana ratsy, ny fahotana mahafaty, ary ny fahafaham-baraka. Ny Baiboly dia manoro làlana antsika ny tokony hatao amin'ny olana rehetra, na ny ara-pianakaviana izany, na ny ara-pinoana, na ny ara-tsosialy.<br ><br>
+
+Ohatra: <br><br>
+Raha misy olona tsy mahafantatra ny tokony hatao amin'ny fiainany, ny Tenin’Andriamanitra dia miteny hoe: “Minoa an'i Jehovah amin'ny fonao rehetra, ary aza miankina amin'ny fahalalanao manokana; maneke Azy amin'ny lalan-kalehanao rehetra, dia hataony mahitsy ny làlanao” (Ohabolana 3:5-6). Amin’ny fanekena sy fialana amin’ny fianteherana amin’ny tena, dia manokatra làlana vaovao ho antsika Andriamanitra.<br ><br>
+
+
+3. Ny Tenin’Andriamanitra dia Manova Fiainana<br><br> 
+Ny fiovam-po marina dia tsy avy amin'ny ezaka ataon'ny tena, fa avy amin’ny herin’ny Tenin'Andriamanitra. “Fa velona sy mahery ny tenin'Andriamanitra, ary maranitra noho ny sabatra roa lela ka manindrona ka mampisaraka ny fanahy sy ny tena”(Hebreo 4:12). Raha mamaky ny Baiboly sy manaraka azy ianao dia miova ny fomba fisainanao, ny toetranao, ary ny fiainanao manontolo.<br ><br>
+
+Ohatra: <br><br>
+Paoly Apostoly dia olona nanenjika ny Kristianina talohan’ny niovany, saingy rehefa nandre ny tenin'Andriamanitra izy, dia niova tanteraka. Nanjary mpitory ny filazantsara izy, ary nanoratra ny ankamaroan’ny boky ao amin’ny Testamenta Vaovao.<br><br>
+
+
+4. Fampiharana ny Tenin’Andriamanitra eo Amin’ny Fiainana<br><br> 
+Ny Tenin’Andriamanitra dia tsy natao hovakiana fotsiny, fa tokony hampiharina amin’ny fiainantsika. Hoy ny Jakoba 1:22: “Aoka ho mpankatò ny teny ianareo, fa aza mpihaino fotsiny, mba tsy hamitahana ny tenanareo.”<br><br>
+
+Fanazavana:<br><br>
+Rehefa mampihatra ny toromarika ao amin’ny Baiboly isika, dia mampiseho fa tena mino sy manaraka an’i Kristy. Ny olona mankatò ny Tenin’Andriamanitra dia toy ny olona manorina trano amin’ny vatolampy, izay tsy ravan’ny rivotra sy ny orana (Matio 7:24-27).<br ><br>
+
+
+
+5. Fampiharana ho an’ny Mpihaino<br><br>  
+1. Vakio isan’andro ny Baiboly: Misy hery miafina ao amin’ny Tenin’Andriamanitra izay mampitombo ny finoanao isan’andro.<br ><br>
+2. Mifohaza maraina sy mivavaha amin’ny fampiasana ny Tenin’Andriamanitra: Ataovy fitaovana hiatrehana ny fiainana ny Soratra Masina.<br ><br>
+3. Zarao amin’ny hafa: Ny Tenin’Andriamanitra dia tsy natao hotazonina irery, fa mila zaraintsika amin’ny olona hafa mba hahasoa azy ireo.<br ><br>
+
+
+Famaranana:<br> <br>
+Ny Tenin'Andriamanitra dia manana hery tsy hay tohaina. Manova fiainana izy, manome torolàlana, ary mitondra fifaliana sy fiadanana. Raha mamaky sy mampihatra azy ianao dia hiaina fiainana feno fifaliana sy voninahitra ho an’Andriamanitra. Hoy Jesosy: “Ny lanitra sy ny tany ho levona, fa ny teniko tsy mba ho levona”(Matio 24:35).
+
+Misaotra anao naharitra nihaino. Raha nahasoa anao izany dia zarao amin'ny hafa.  </p><br>
+    </section>
+    
+    <main>
+    <div id="chat-container">
+      <header>
+        <div class="logo">
+          <img src="https://media.tenor.com/FzTqQGIrI4AAAAAM/kjv-excited.gif " alt="Logo">
+          <h1>Service en ligne </h1>
+        </div>
+      </header><br><br>
+
+
+      <div id="question-buttons">
+        <button class="question-button" onclick="addPredefinedQuestion('1 ')">Iza moa ianareo? </button>
+        <button class="question-button" onclick="addPredefinedQuestion('2')">Afaka mivavaka ny marary ve ianareo? </button>
+        <button class="question-button" onclick="addPredefinedQuestion('3')">Fiangonana inona moa ianareo? </button>
+        <button class="question-button" onclick="addPredefinedQuestion('4')">Ny laharana finday </button>
+        <button class="question-button" onclick="addPredefinedQuestion('5')">Ny hora fanaovana vavaka ho an'i tsy Salama </button>
+      </div>
+      <div id="messages"></div>
+      <div id="input-container">
+        <input type="text" id="user-input" placeholder="Ampidiro fanontaniana...">
+        <button id="send-button">Alefa</button>
+      </div>
+    </div>
+  </main>
+  
+  
+  
+  <!-- sC bot -->
+  
+  <script>
+    // JavaScript
+    const messagesDiv = document.getElementById('messages');
+    const userInput = document.getElementById('user-input');
+    const sendButton = document.getElementById('send-button');
+
+    const responses = {
+      "1 ": "Misaotra anao nametraka fanontaniana, izahay dia tsy antokompiangonana fa olona vitsivitsy izay niray saina hampiely ny fitoriana filazantsara eto Madagascar. Raha te hanaraka izany foana ianao dia azonao atao ny mitsidika ny pagenay mba hahazahoanao hery ao amin'ny fanahy masina. '<a href='></a>",
+      "2": "Eny afaka mivavaka olona tsy salama koa izahay mitondra amambavaka ho an'i olona manana olana. Azonao atao miditra ao amin'ny fizarana mila vavaka ato amin'ny pejy raha hiresaka aminay mivantana></a>", 
+      "3": "Manana ny antokompiangonana izahay saingy tsy azonay atao ny hilaza izany, ny tena tanjona dia hahatonga ny olona iray ho an'i Jesosy ihany '<a href'></a> ",
+      "4": "Eny! Ireto misy laharana izay afahanao mifandray aminay mivantana ; 0323911654, 0333635111, 0384557584.<a href=''></a>. Azonao atao koa miditra ao amin'ny section mila vavaka raha te hifandray aminay faingana '.",
+      "5": "<a href='https://retrait-site-web-asa-en-ligne-mada.vercel.app/'>Tsindrio eto raha mila fanampiana momba ny retrait</a>",
+      "5": " Eny! Mandray olona manomboka amin'ny 18h:30min ka hatramin'ny 20h.''<a href='' ></a>"
+    };
+
+    sendButton.addEventListener('click', () => {
+      const userText = userInput.value.trim();
+      if (userText) {
+        addMessage('User', userText);
+        getBotResponse(userText);
+        userInput.value = '';
+      }
+    });
+
+    function addMessage(sender, text) {
+      const message = document.createElement('div');
+      message.className = `message ${sender === 'User' ? 'user-message' : 'bot-message'}`;
+      message.innerHTML = text;
+      messagesDiv.appendChild(message);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    async function getBotResponse(userText) {
+      if (responses[userText]) {
+        addMessage('Bot', responses[userText]);
+      } else {
+        const wikiResponse = await searchWikipedia(userText);
+        if (wikiResponse) {
+          addMessage('Bot', wikiResponse);
+        } else {
+          const googleLink = `<a href="https://www.google.com/search?q=${encodeURIComponent(userText)}" target="_blank">Tsindrio eto raha hijery valiny amin'ny Google</a>`;
+          addMessage('Bot', googleLink);
+        }
+      }
+    }
+
+    async function searchWikipedia(query) {
+      const apiUrl = `https://fr.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&format=json&origin=*`;
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        if (data.query.search.length > 0) {
+          const result = data.query.search[0];
+          return `<strong>${result.title}</strong>: ${result.snippet}... <a href="https://fr.wikipedia.org/wiki/${encodeURIComponent(result.title)}" target="_blank">voir plus </a>`;
+        } else {
+          return null;
+        }
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function addPredefinedQuestion(question) {
+      addMessage('User', question);
+      getBotResponse(question);
+    }
+  </script>
+  
+
+    <section id="client">
+        <!-- Azonao soratana eto ny votoaty mikasika ny "Service Client" -->
+        <p>Raha misy mila Toro-hevitra sy vavaka manokana dia azonao atao mifandray aminay mivantana amin'ny alalan'ny antso whatsapp na koa hiantso any mivantana </p><br ><br >
+        
+        
+        
+        
+        
+    <h1>Appel </h1>
+    <a href="tel:0323911654" class="call-btn orange">Appel Orange </a>
+    <a href="tel:0333635111" class="call-btn airtel">Appel Airtel </a>
+    <a href="tel:0384557584" class="call-btn telma">Appel Telma </a>
+
+                <a href="https//wa.me/261323911654" class="call-btn whatsapp">WhatsApp </a><br > 
+  
+    <script>
+        // Fomba fampisehoana ny section mifanaraka amin'ny bouton
+        function showSection(sectionId) {
+            // Alaina daholo ny sections rehetra
+            const sections = document.querySelectorAll('section');
+            // Atao tsy miseho daholo aloha ny sections rehetra
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            // Miseho ilay section mifanaraka amin'ny bouton voatsindry
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+    
+    
+    
+    <h1>Partage Lien Direct</h1>
+    <div class="share-buttons">
+        <!-- Partage Facebook -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://ny-tenin-andriamanitra-fafi-7bks.vercel.app/" 
+           class="facebook" target="_blank">Facebook</a>
+
+        <!-- Partage Telegram -->
+        <a href="https://t.me/share/url?url=https://ny-tenin-andriamanitra-fafi-7bks.vercel.app/&text=Jereo ity tranokala ity!" 
+           class="telegram" target="_blank">Telegram</a>
+
+        <!-- Partage Email -->
+        <a href="mailto:?subject=Zahao ity rohy ity&body=Jereo ity tranokala ity: https://www.mysite.com" 
+           class="email" target="_blank">Email</a>
+
+        <!-- Partage WhatsApp -->
+        <a href="https://wa.me/?text
+
+
+    
+</body>
+
+
+
+  </html>
